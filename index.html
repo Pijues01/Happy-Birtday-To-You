@@ -837,8 +837,9 @@ starData.forEach((s, i)=>{
 /* ============ Countdown + Gift box ============ */
 function getNextBirthday(){
   const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   let target = new Date(now.getFullYear(), 6, 8, 0, 0, 0);
-  if(now > target){ target = new Date(now.getFullYear()+1, 6, 8, 0, 0, 0); }
+  if(today > target){ target = new Date(now.getFullYear()+1, 6, 8, 0, 0, 0); }
   return target;
 }
 let target = getNextBirthday();
